@@ -7,18 +7,16 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    -<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    -<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Spider Chart</title>
 
-   
-
     <!--Google Font-->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    -<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    -<link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -38,7 +36,7 @@
     }
     
     .studentID{
-        background-color:#6698FF;
+        background-color:#F17153;
         height:36px;border: 1px solid;
         cursor: pointer;
         border-radius: 5px;
@@ -53,14 +51,14 @@
     }
 
     .studentID:hover{
-    background:linear-gradient(90deg,#87CEFA,#00BFFF);
+    background:linear-gradient(90deg,#f1ab53,#F17153);
     }
     .studentID:active{
     opacity: 0.5;
     }
 
     .enterButton{
-        background:#6698FF;
+        background:#F17153;
         border-radius:10px;
         border:none;
         outline:none;
@@ -75,14 +73,14 @@
     }
 
     .enterButton:hover{
-    background:linear-gradient(90deg,#87CEFA,#00BFFF);
+    background:linear-gradient(90deg,#f1ab53,#F17153);
     }
     .enterButton:active{
     opacity: 0.5;
     }
 
     .viewButton{
-        background:#6698FF;
+        background:#F17153;
         border-radius:10px;
         border:none;
         outline:none;
@@ -96,7 +94,7 @@
     }
 
     .viewButton:hover{
-    background:linear-gradient(90deg,#87CEFA,#00BFFF);
+    background:linear-gradient(90deg,#f1ab53,#F17153);
     }
     .viewButton:active{
     opacity: 0.5;
@@ -188,9 +186,6 @@
             
         </div>
       </div>
-
-
-
 
     <?php
     if(isset($_POST['submit'])){
@@ -324,8 +319,6 @@ new Chart(ctx, {
 });
 
   }
-
-
 </script>
 
 
