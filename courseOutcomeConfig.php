@@ -60,26 +60,29 @@
     }
 
 
-    if($grade == 'A'){ $tmo = 100; $gp=4;}
-    elseif($grade == 'A-'){ $tmo = 89; $gp=3.7;}
-    elseif($grade == 'B+') {$tmo = 84; $gp=3.3;}
-    elseif($grade == 'B') {$tmo = 79; $gp=3;}
-    elseif($grade == 'B-'){$tmo = 74;$gp=2.7;}
-    elseif($grade == 'C+'){$tmo = 69;$gp=2.3;}
-    elseif($grade == 'C'){$tmo = 64;$gp=2;}
-    elseif($grade == 'C-'){$tmo = 59;$gp=1.7;}
-    elseif($grade == 'D+'){$tmo = 54;$gp=1.3;}
-    elseif($grade == 'D'){$tmo = 49;$gp=1;}
-    elseif($grade == 'F'){$tmo = 0;$gp=0;}
+    if($grade == 'A'||$grade == 'a'){ $tmo = 100; $gp=4;}
+    elseif($grade == 'A-' ||$grade == 'a-'){ $tmo = 89; $gp=3.7;}
+    elseif($grade == 'B+'||$grade == 'b+') {$tmo = 84; $gp=3.3;}
+    elseif($grade == 'B'||$grade == 'b') {$tmo = 79; $gp=3;}
+    elseif($grade == 'B-'||$grade == 'b-'){$tmo = 74;$gp=2.7;}
+    elseif($grade == 'C+'||$grade == 'c+'){$tmo = 69;$gp=2.3;}
+    elseif($grade == 'C'||$grade == 'c'){$tmo = 64;$gp=2;}
+    elseif($grade == 'C-'||$grade == 'c-'){$tmo = 59;$gp=1.7;}
+    elseif($grade == 'D+'||$grade == 'd+'){$tmo = 54;$gp=1.3;}
+    elseif($grade == 'D'||$grade == 'd'){$tmo = 49;$gp=1;}
+    elseif($grade == 'F'||$grade == 'f'){$tmo = 0;$gp=0;}
     else {$valid = 0;}
     
 
     $scp_insert = "INSERT INTO student_course_performance_t (scpID, registrationID, totalMarksObtained, gradePoint)
     VALUES (NULL, '$new_registrationID', '$tmo', '$gp')";
-
+    echo "hello";
 if($con->query($scp_insert) == TRUE){
+    echo $new_registrationID;
+    echo $tmo;
+    echo $gp;
     $scp =$con->query("SELECT * FROM student_course_performance_t WHERE registrationID = '$new_registrationID' AND totalMarksObtained= '$tmo' 
-    AND gradePoint = '$gp'")->fetch_assoc();
+    ")->fetch_assoc();
 
     $new_scpID = $scp ['scpID'];
 }
